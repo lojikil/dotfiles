@@ -1,0 +1,38 @@
+;; g0k setup
+
+(use proxy)
+(use tarfs)
+(use gzip-stream)
+(use httplib)
+(use tlslib)
+(use smtplib)
+(use maillib)
+(use ftplib)
+(use net-scan)
+(use stilyaga)
+(use scsh)
+(use enyalios)
+(use lispm)
+
+(lispm/define-lispm-environment
+    g0k-env
+    (add-command!
+        "http-get"
+        httplib/get)
+    (add-command!
+        "http-post"
+        httplib/post)
+    (add-command!
+        "http-put"
+        httplib/put)
+    (add-command!
+        "http-delete"
+        httplib/delete)
+    (add-command!
+        "http-options"
+        httplib/options)
+    (add-command!
+        "http-head"
+        httplib/head))
+
+(lispm/prompt g0k-env "g0k")
