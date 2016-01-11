@@ -1,6 +1,7 @@
 export PATH="$PATH:$HOME/.digamma/bin:/usr/local/go/bin:$HOME/bin:$HOME/opt/bin"
 export awesome_person="pronto"
 export whowashere='pronto was here!'
+
 alias ls='ls -apFG'
 alias df='df -h'
 alias du='du -h'
